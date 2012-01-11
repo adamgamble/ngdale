@@ -1,4 +1,22 @@
 Ngdale::Application.routes.draw do
+  devise_for :members do
+    root :to => "custom_pages#home"
+  end
+
+  devise_for :admins do
+    root :to => "custom_pages#home"
+  end
+
+  root :to => "custom_pages#home"
+
+  namespace :admin do
+    root :to => "custom_pages#home"
+    resources :members
+  end
+
+  namespace :members do
+    root :to => "custom_pages#home"
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

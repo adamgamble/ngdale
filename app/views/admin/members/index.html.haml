@@ -1,0 +1,19 @@
+%h1 Manage Members
+%h3= link_to "New Member", new_admin_member_path
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Last Login
+    %th
+  - if @members.any?
+    -@members.each do |member|
+      %tr
+        %td= member.name
+        %td= member.email
+        -if member.last_sign_in_at
+          %td= member.last_sign_in_at.strftime("%m/%d/%y")
+        -else
+          %td Never Signed In
+        %td= link_to "Show", admin_member_path(member), :class => "btn primary"
+        %td= link_to "Delete", admin_member_path(member), :method => :delete, :confirm => "Are you sure?", :class => "btn danger"

@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title NgdaleReading
+    = stylesheet_link_tag    "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .topbar
+      .topbar-inner
+        .container
+          %a.brand= "NGDale CoC Admin"
+          %ul.nav
+            %li
+              =link_to "Members", admin_members_path
+            %li
+              =link_to "Logout", destroy_admin_session_path, :method => :delete
+    .container
+      .content
+        -if flash[:notice] 
+          .alert-message.success
+            = flash[:notice]
+        -if flash[:error] 
+          .alert-message.error
+            = flash[:error]
+        = yield

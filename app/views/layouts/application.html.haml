@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title NgdaleReading
+    = stylesheet_link_tag    "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .topbar
+      .topbar-inner
+        .container
+          %a.brand{:href => root_path}= "North Gardendale Church of Christ"
+          %ul.nav
+            %li
+              =link_to "About Us", "#"
+            %li
+              =link_to "Contact Us", "#"
+            %li
+              =link_to "Sermons", "#"
+            %li
+              =link_to "Study Resources", "#"
+            %li
+              =link_to "Members", "/members"
+    .container
+      .content
+        = yield

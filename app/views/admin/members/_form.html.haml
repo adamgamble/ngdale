@@ -1,0 +1,15 @@
+-unless @member.errors
+  =@member.errors.full_messages.to_sentence
+=twitter_bootstrap_form_for @member, :url => @member.new_record? ? admin_members_path : admin_member_path(@member) do |f|
+  =f.inputs @member.new_record? ? "New Member" : "Edit Member" do
+    =f.text_field :name
+    %br
+    =f.email_field :email, :placeholder => 'me@example.com'
+    %br
+    =f.password_field :password
+    %br
+    =f.password_field :password_confirmation
+    %br
+    = f.actions do
+      = f.submit
+      = button_tag  'Cancel', :type => 'reset', :class => 'btn'

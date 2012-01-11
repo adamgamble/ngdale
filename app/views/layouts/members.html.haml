@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title NgdaleReading
+    = stylesheet_link_tag    "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .topbar
+      .topbar-inner
+        .container
+          %a.brand= "NGDale CoC Members"
+          %ul.nav
+            %li
+              =link_to "Logout", destroy_member_session_path, :method => :delete
+    .container
+      .content
+        = yield
