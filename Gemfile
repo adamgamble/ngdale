@@ -21,6 +21,8 @@ end
 
 group :development do
   gem "erb2haml"
+  gem 'heroku'
+  gem 'taps'
 end
 
 gem 'jquery-rails'
