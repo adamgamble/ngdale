@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120112055101) do
+ActiveRecord::Schema.define(:version => 20120112221131) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -57,5 +57,16 @@ ActiveRecord::Schema.define(:version => 20120112055101) do
 
   add_index "members", ["email"], :name => "index_members_on_email", :unique => true
   add_index "members", ["reset_password_token"], :name => "index_members_on_reset_password_token", :unique => true
+
+  create_table "sermons", :force => true do |t|
+    t.string   "name"
+    t.string   "preacher"
+    t.date     "date"
+    t.string   "sermon_file_name"
+    t.integer  "sermon_file_size"
+    t.string   "sermon_content_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
