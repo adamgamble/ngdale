@@ -7,11 +7,13 @@
   %li=@sermon.name
   %li=@sermon.preacher
 :javascript
-  var global_lp = 0;
-  var global_ready = 0;
-  $("#jplayer").jPlayer({
-    ready: function ()
-    {
-      $(this).jPlayer("setMedia", {mp3: '#{@sermon.sermon.url}'});
-    }
+  $(document).ready(function(){
+    var global_lp = 0;
+    var global_ready = 0;
+    $("#jplayer").jPlayer({
+      ready: function ()
+      {
+        $(this).jPlayer("setMedia", {mp3: '#{@sermon.sermon.url}'});
+      }
+    });
   });
