@@ -12,6 +12,6 @@
   $("#jplayer").jPlayer({
     ready: function ()
     {
-      $(this).setFile('#{@sermon.url}').play();
+      $(this).setFile('#{@sermon.sermon.url}').play();
     }
   })
