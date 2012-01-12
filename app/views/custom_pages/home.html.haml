@@ -19,12 +19,11 @@
           7:00 PM Bible Study
 
       %h5 Events
-      %ul
+      %table.bordered-table.zebra-striped
         -@events.each do |event|
-          %li
-            %b=event.date
-            %br
-            =event.name
+          %tr
+            %td=event.date
+            %td=event.name
   .content
     .hero-unit
       %ul.media-grid
