@@ -2,6 +2,7 @@
 %h3= link_to "Edit Sermon", edit_admin_sermon_path(@sermon)
 
 #jplayer
+=link_to "Play Sermon", "javascript:$('#jplayer').jPlayer('play');", :class => "btn primary"
 %ul
   %li=@sermon.date.strftime("%m-%d-%y")
   %li=@sermon.name
