@@ -1,4 +1,4 @@
-class Admin::Sermons < Admin::BaseController
+class Admin::SermonsController < Admin::BaseController
   def index
     @sermons = Sermon.all
   end
