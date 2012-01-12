@@ -1,0 +1,31 @@
+.container-fluid
+  .sidebar
+    .well
+      %h5 Service Times
+      %ul
+        %li
+          %b Sunday Morning
+          %br
+          9:30 AM Worship
+          %br
+          10:30 AM Bible Study
+        %li
+          %b Sunday Evening
+          %br
+          5:00 PM Worship
+        %li
+          %b Wednesday Evening
+          %br
+          7:00 PM Bible Study
+
+      %h5 Events
+      %ul
+        -@events.each do |event|
+          %li
+            =event.date
+            %br
+            =event.name
+  .content
+    .hero-unit
+      %ul.media-grid
+        %li=image_tag "http://placehold.it/600x330"

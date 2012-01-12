@@ -1,0 +1,10 @@
+-unless @event.errors
+  =@event.errors.full_messages.to_sentence
+=twitter_bootstrap_form_for @event, :url => @event.new_record? ? admin_events_path : admin_event_path(@event) do |f|
+  =f.inputs @event.new_record? ? "New Event" : "Edit Event" do
+    =f.text_field :name
+    %br
+    =f.date_select :date, 'Date', {}, :class => 'small'
+    = f.actions do
+      = f.submit
+      = button_tag  'Cancel', :type => 'reset', :class => 'btn'

@@ -12,11 +12,14 @@ Ngdale::Application.routes.draw do
   namespace :admin do
     root :to => "custom_pages#home"
     resources :members
+    resources :events
   end
 
   namespace :members do
     root :to => "custom_pages#home"
   end
+
+  resources :events, :only => [:index, :show]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

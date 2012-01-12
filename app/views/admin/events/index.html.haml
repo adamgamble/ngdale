@@ -1,0 +1,14 @@
+%h1 Events
+%h3= link_to "New Event", new_admin_event_path
+%table
+  %tr
+    %th Date
+    %th Event
+    %th
+    %th
+  -@events.each do |event|
+    %tr
+      %td=event.date
+      %td= link_to event.name, admin_event_path(event)
+      %td= link_to "Edit", edit_admin_event_path(event), :class => "btn success"
+      %td= link_to "Delete", admin_event_path(event), :class => "btn danger", :method => :delete

@@ -1,0 +1,9 @@
+%h1 Events
+%table
+  %tr
+    %th Date
+    %th Event
+  -@events.each do |event|
+    %tr
+      %td=event.date
+      %td= link_to event.name, event
