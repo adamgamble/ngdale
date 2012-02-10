@@ -1,0 +1,18 @@
+%h1 Sermons
+
+%h3=link_to "New Sermon", new_admin_sermon_path
+
+%table.bordered-table.zebra-striped
+  %tr
+    %th Date
+    %th Name
+    %th Preacher
+    %th
+    %th
+  -@sermons.each do |sermon|
+    %tr
+      %td=sermon.date.strftime("%m-%d-%y")
+      %td=sermon.name
+      %td=sermon.preacher
+      %td=link_to "Show", admin_sermon_path(sermon), :class => "btn primary"
+      %td=link_to "Delete", admin_sermon_path(sermon), :method => :delete, :class => "btn danger"

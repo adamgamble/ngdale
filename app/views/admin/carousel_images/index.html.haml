@@ -1,0 +1,16 @@
+%h1 Carousel Images
+
+%h3=link_to "New Carousel Image", new_admin_carousel_image_path
+
+%table.bordered-table.zebra-striped
+  %tr
+    %th Header
+    %th Caption
+    %th
+    %th
+  -@carousel_images.each do |carousel_image|
+    %tr
+      %td=carousel_image.header
+      %td=carousel_image.caption
+      %td=link_to "Show", admin_carousel_image_path(carousel_image), :class => "btn primary"
+      %td=link_to "Delete", admin_carousel_image_path(carousel_image), :method => :delete, :class => "btn danger"

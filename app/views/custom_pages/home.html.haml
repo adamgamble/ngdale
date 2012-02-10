@@ -1,16 +1,12 @@
 .span8
   #carousel.carousel
     .carousel-inner
-      .item.active
-        =image_tag "http://1.bp.blogspot.com/_PhFx1msRZPo/TNnEOo7zFYI/AAAAAAAADrU/M3GEThY1Bws/s1600/holy-prayer.jpg"
-        .carousel-caption
-          %h4 We Sing!
-          %p This is us singing!
-      .item
-        =image_tag "http://singanewsong.x.iabc.com/files/2011/03/539173_10386602-lightning.jpg"
-        .carousel-caption
-          %h4 Lightning!
-          %p Kaboom!
+      - @carousel_images.each_with_index do |carousel_image, index|
+        .item{:class => "#{index == 0 ? "active" : ""}"}
+          =image_tag carousel_image.image.url(:original)
+          .carousel-caption
+            %h4=carousel_image.header
+            %p=carousel_image.caption
 .span3
   .well
     %h5 Service Times

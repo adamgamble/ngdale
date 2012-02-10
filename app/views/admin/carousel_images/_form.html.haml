@@ -1,0 +1,13 @@
+-unless @carousel_image.errors
+  =@carousel_image.errors.full_messages.to_sentence
+=twitter_bootstrap_form_for @carousel_image, :url => @carousel_image.new_record? ? admin_carousel_images_path : admin_carousel_image_path(@carousel_image), :html => { :multipart => true } do |f|
+  =f.inputs @carousel_image.new_record? ? "New Carousel Image" : "Edit Carousel Image" do
+    =f.text_field :header
+    %br
+    =f.text_field :caption
+    %br
+    =f.file_field :image
+    %br
+    = f.actions do
+      = f.submit
+      = button_tag  'Cancel', :type => 'reset', :class => 'btn'

@@ -1,0 +1,6 @@
+%h1= @carousel_image.name
+%h3= link_to "Edit Carousel Image", edit_admin_carousel_image_path(@carousel_image)
+
+%ul
+  %li=@carousel_image.title
+  %li=@carousel_image.description

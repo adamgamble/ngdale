@@ -13,6 +13,8 @@ Ngdale::Application.routes.draw do
     root :to => "custom_pages#home"
     resources :members
     resources :events
+    resources :sermons
+    resources :carousel_images
   end
 
   namespace :members do

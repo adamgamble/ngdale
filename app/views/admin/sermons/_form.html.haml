@@ -1,0 +1,15 @@
+-unless @sermon.errors
+  =@sermon.errors.full_messages.to_sentence
+=twitter_bootstrap_form_for @sermon, :url => @sermon.new_record? ? admin_sermons_path : admin_sermon_path(@sermon), :html => { :multipart => true } do |f|
+  =f.inputs @sermon.new_record? ? "New Sermon" : "Edit Sermon" do
+    =f.date_select :date
+    %br
+    =f.text_field :name
+    %br
+    =f.text_field :preacher
+    %br
+    =f.file_field :sermon
+    %br
+    = f.actions do
+      = f.submit
+      = button_tag  'Cancel', :type => 'reset', :class => 'btn'
