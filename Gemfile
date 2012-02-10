@@ -5,7 +5,6 @@ gem 'haml-rails'
 gem 'devise'
 gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'twitter_bootstrap_form_for'
-gem 'therubyracer-heroku'
 gem 'paperclip'
 gem 'aws-s3'
 
