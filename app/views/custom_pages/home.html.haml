@@ -1,30 +1,45 @@
-.container-fluid
-  .sidebar
-    .well
-      %h5 Service Times
-      %ul
-        %li
-          %b Sunday Morning
-          %br
-          9:30 AM Worship
-          %br
-          10:30 AM Bible Study
-        %li
-          %b Sunday Evening
-          %br
-          5:00 PM Worship
-        %li
-          %b Wednesday Evening
-          %br
-          7:00 PM Bible Study
+.span8
+  #carousel.carousel
+    .carousel-inner
+      .item.active
+        =image_tag "http://1.bp.blogspot.com/_PhFx1msRZPo/TNnEOo7zFYI/AAAAAAAADrU/M3GEThY1Bws/s1600/holy-prayer.jpg"
+        .carousel-caption
+          %h4 We Sing!
+          %p This is us singing!
+      .item
+        =image_tag "http://singanewsong.x.iabc.com/files/2011/03/539173_10386602-lightning.jpg"
+        .carousel-caption
+          %h4 Lightning!
+          %p Kaboom!
+.span3
+  .well
+    %h5 Service Times
+    %ul
+      %li
+        %b Sunday Morning
+        %br
+        9:30 AM Worship
+        %br
+        10:30 AM Bible Study
+      %li
+        %b Sunday Evening
+        %br
+        5:00 PM Worship
+      %li
+        %b Wednesday Evening
+        %br
+        7:00 PM Bible Study
 
-      %h5 Events
-      %table.bordered-table.zebra-striped
-        -@events.each do |event|
-          %tr
-            %td=event.date
-            %td=event.name
-  .content
-    .hero-unit
-      %ul.media-grid
-        %li=image_tag "http://placehold.it/600x330"
+    %h5 Events
+    %table.bordered-table.zebra-striped
+      -@events.each do |event|
+        %tr
+          %td=event.date
+          %td=event.name
+-content_for :javascripts do
+  :javascript
+    $(document).ready(function() {
+      $('#carousel').carousel({
+        interval: 5000
+      })
+    })

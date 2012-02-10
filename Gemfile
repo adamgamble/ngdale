@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 gem 'haml-rails'
 gem 'devise'
+gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'twitter_bootstrap_form_for'
 
 # Bundle edge Rails instead:
