@@ -1,3 +1,76 @@
 // Place all the styles related to the custom_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.64) 1%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.35) 74%, rgba(0,0,0,0.65) 94%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(1%,rgba(0,0,0,0.64)), color-stop(51%,rgba(0,0,0,0)), color-stop(74%,rgba(0,0,0,0.35)), color-stop(94%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.64) 1%,rgba(0,0,0,0) 51%,rgba(0,0,0,0.35) 74%,rgba(0,0,0,0.65) 94%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.64) 1%,rgba(0,0,0,0) 51%,rgba(0,0,0,0.35) 74%,rgba(0,0,0,0.65) 94%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.64) 1%,rgba(0,0,0,0) 51%,rgba(0,0,0,0.35) 74%,rgba(0,0,0,0.65) 94%); /* IE10+ */
+  background: linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.64) 1%,rgba(0,0,0,0) 51%,rgba(0,0,0,0.35) 74%,rgba(0,0,0,0.65) 94%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height:800px;
+}
+
+.custom_navbar {
+  height: 25px;
+  background-color: #003366;
+  margin-top: 0px;
+  position:fixed;
+  top:0px;
+  width: 100%;
+  display:block;
+}
+
+.main_header {
+  color: #003366;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  font-family: helvetica;
+}
+
+.front_page_strip {
+  background-color: #003366;
+  margin: 0px;
+  margin-left: -150px;
+  margin-top: 30px;
+  height: 275px;
+  width: 110%;
+  position: fixed;
+  z-index: -1000;
+}
+
+.carousel-caption {
+  width: 590px;
+}
+
+.custom_navbar .container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 475px;
+  height:19px;
+  padding-top: 4px;
+  background-color: #C0C0C0;
+}
+
+.custom_navbar .container .nav {
+  width: 700px;
+  padding-top: 2px;
+  color: #003366;
+  display: inline;
+  list-style-type: none;
+  margin-top: 3px;
+}
+.custom_navbar .container .nav li {
+  display: inline;
+  margin-top: 2px;
+}
+
+.custom_navbar .container .nav li a {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline;
+}

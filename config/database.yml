@@ -16,6 +16,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: ngdale_development
+  host: localhost
   pool: 5
   username: postgres
   password: postgres
@@ -41,15 +42,8 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: ngdale_test
-  pool: 5
-  username: postgres
-  password: postgres
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: ngdale_production
   pool: 5
   username: postgres
   password: postgres
