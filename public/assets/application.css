@@ -6795,6 +6795,39 @@ body {
 }
 
 /* line 16, ../../app/assets/stylesheets/custom_pages.css.scss */
+.home_page_row {
+  margin-top: 25px;
+}
+
+/* line 20, ../../app/assets/stylesheets/custom_pages.css.scss */
+.service_times h5 {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+/* line 30, ../../app/assets/stylesheets/custom_pages.css.scss */
+.service_times h3 {
+  color: white;
+}
+
+/* line 34, ../../app/assets/stylesheets/custom_pages.css.scss */
+.service_times {
+  color: white;
+}
+
+/* line 38, ../../app/assets/stylesheets/custom_pages.css.scss */
+.service_times .assembly_text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+/* line 44, ../../app/assets/stylesheets/custom_pages.css.scss */
 .custom_navbar {
   height: 25px;
   background-color: #003366;
@@ -6805,15 +6838,30 @@ body {
   display: block;
 }
 
-/* line 26, ../../app/assets/stylesheets/custom_pages.css.scss */
-.main_header {
+/* line 53, ../../app/assets/stylesheets/custom_pages.css.scss */
+.custom_navbar a {
   color: #003366;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* line 58, ../../app/assets/stylesheets/custom_pages.css.scss */
+.main_header .title_header {
+  color: #003366;
   font-family: helvetica;
 }
 
-/* line 33, ../../app/assets/stylesheets/custom_pages.css.scss */
+/* line 63, ../../app/assets/stylesheets/custom_pages.css.scss */
+.main_header .verse_header {
+  margin-left: 50px;
+}
+
+/* line 67, ../../app/assets/stylesheets/custom_pages.css.scss */
+.main_header {
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+
+/* line 72, ../../app/assets/stylesheets/custom_pages.css.scss */
 .front_page_strip {
   background-color: #003366;
   margin: 0px;
@@ -6825,22 +6873,22 @@ body {
   z-index: -1000;
 }
 
-/* line 44, ../../app/assets/stylesheets/custom_pages.css.scss */
+/* line 83, ../../app/assets/stylesheets/custom_pages.css.scss */
 .carousel-caption {
   width: 590px;
 }
 
-/* line 48, ../../app/assets/stylesheets/custom_pages.css.scss */
+/* line 87, ../../app/assets/stylesheets/custom_pages.css.scss */
 .custom_navbar .container {
   margin-left: auto;
   margin-right: auto;
-  width: 475px;
+  width: 500px;
   height: 19px;
   padding-top: 4px;
   background-color: #C0C0C0;
 }
 
-/* line 57, ../../app/assets/stylesheets/custom_pages.css.scss */
+/* line 96, ../../app/assets/stylesheets/custom_pages.css.scss */
 .custom_navbar .container .nav {
   width: 700px;
   padding-top: 2px;
@@ -6850,13 +6898,13 @@ body {
   margin-top: 3px;
 }
 
-/* line 65, ../../app/assets/stylesheets/custom_pages.css.scss */
+/* line 104, ../../app/assets/stylesheets/custom_pages.css.scss */
 .custom_navbar .container .nav li {
   display: inline;
   margin-top: 2px;
 }
 
-/* line 70, ../../app/assets/stylesheets/custom_pages.css.scss */
+/* line 109, ../../app/assets/stylesheets/custom_pages.css.scss */
 .custom_navbar .container .nav li a {
   margin-top: auto;
   margin-bottom: auto;

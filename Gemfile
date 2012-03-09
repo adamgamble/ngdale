@@ -8,10 +8,7 @@ gem 'twitter_bootstrap_form_for'
 gem 'paperclip'
 gem 'aws-s3'
 gem 'aws-sdk'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
+gem 'jquery-rails'
 gem 'pg'
 
 
@@ -28,18 +25,4 @@ group :development do
   gem 'heroku'
   gem 'taps'
 end
-
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 

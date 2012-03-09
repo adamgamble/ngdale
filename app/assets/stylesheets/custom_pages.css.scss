@@ -13,6 +13,34 @@ body {
   height:800px;
 }
 
+.home_page_row {
+  margin-top: 25px;
+}
+
+.service_times h5 {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.service_times h3 {
+  color:white;
+}
+
+.service_times {
+  color: white;
+}
+
+.service_times .assembly_text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
 .custom_navbar {
   height: 25px;
   background-color: #003366;
@@ -22,12 +50,23 @@ body {
   width: 100%;
   display:block;
 }
+.custom_navbar a {
+  color: #003366;
+  font-weight: bold;
+}
+
+.main_header .title_header {
+  color: #003366;
+  font-family: helvetica;
+}
+
+.main_header .verse_header {
+  margin-left: 50px;
+}
 
 .main_header {
-  color: #003366;
   margin-top: -20px;
-  margin-bottom: 20px;
-  font-family: helvetica;
+  margin-bottom: 25px;
 }
 
 .front_page_strip {
@@ -48,7 +87,7 @@ body {
 .custom_navbar .container {
   margin-left: auto;
   margin-right: auto;
-  width: 475px;
+  width: 500px;
   height:19px;
   padding-top: 4px;
   background-color: #C0C0C0;
