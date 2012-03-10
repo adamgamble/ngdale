@@ -1,33 +1,32 @@
-.front_page_strip
-.row.home_page_row
+.row.well
+  #top_header_carousel.carousel
+    .carousel-inner
+      .item.active
+        %h2.call_out Come Worship With Us.
+      .item
+        %h2.call_out.verse For where two or three are gathered in my name, there am I among them - Matthew 18:20
+  %hr
   .span4
-    .service_times
-      %br
-      %br
-      %br
-      %h5 Meeting Times
-      %ul
-        %li
-          %h3 Sunday Morning
-          9:30 AM Worship
-          %br
-          10:30 AM Bible Study
-        %li
-          %h3 Sunday Evening
-          5:00 PM Worship
-        %li
-          %h3 Wednesday Evening
-          7:00 PM Bible Study
-        %a{:href => "javascript:void(0);", :class => "assembly_text", :onclick => "$('#map_modal').modal({show: true});"}Assembling regularly at 380 Hickory Road, Gardendale, AL (click here for map)
-  .span8
+    %h5 Meeting Times
+    %ul
+      %li
+        %h3 Sunday Morning
+        9:30 AM Worship
+        %br
+        10:30 AM Bible Study
+      %li
+        %h3 Sunday Evening
+        5:00 PM Worship
+      %li
+        %h3 Wednesday Evening
+        7:00 PM Bible Study
+      %a{:href => "javascript:void(0);", :class => "assembly_text", :onclick => "$('#map_modal').modal({show: true});"}Assembling regularly at 380 Hickory Road, Gardendale, AL (click here for map)
+  .span6
     #carousel.carousel
       .carousel-inner
         - @carousel_images.each_with_index do |carousel_image, index|
           .item{:class => "#{index == 0 ? "active" : ""}"}
             =image_tag carousel_image.image.url(:original)
-            .carousel-caption
-              %h4=carousel_image.header
-              %p=carousel_image.caption
 #map_modal.modal.fade
   .modal-header
     %a{:class => "close", "data-dismiss" => "modal"}x
@@ -38,7 +37,8 @@
 -content_for :javascripts do
   :javascript
     $(document).ready(function() {
-      $('#carousel').carousel({
-        interval: 2000
+      $('#top_header_carousel').carousel({
+        interval: 5000,
+        loop: true
       })
     })

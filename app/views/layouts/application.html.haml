@@ -2,6 +2,8 @@
 %html
   %head
     %title NgdaleReading
+    :plain
+      <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     = stylesheet_link_tag    "application"
     = stylesheet_link_tag    "custom_pages"
     = javascript_include_tag "application"
@@ -9,29 +11,28 @@
     :plain
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   %body
-    .custom_navbar
-      .container
-        %ul.nav
-          %li
-            =link_to "Home", "/"
-          %li
-            =link_to "About Us", "#"
-          %li
-            =link_to "Services", "#"
-          %li
-            =link_to "Directions", "#"
-          %li
-            =link_to "Members", "/members"
-          %li
-            =link_to "Resources", "#"
-          %li
-            =link_to "Contact Us", "#"
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          =link_to "North Gardendale church of Christ", "/", :class => "brand"
+          %ul.nav
+            %li
+              =link_to "Home", "/", :class => "btn disabled"
+            %li
+              =link_to "About Us", "#"
+            %li
+              =link_to "Services", "#"
+            %li
+              =link_to "Directions", "#"
+            %li
+              =link_to "Members", "/members"
+            %li
+              =link_to "Resources", "#"
+            %li
+              =link_to "Contact Us", "#"
     .container
       .main_header
-        -unless flash.any?
-          %h1.title_header The North Gardendale church of Christ
-          %h3.verse_header "For where two or three are gathered together in my name, there am I in the midst of them." -- Matthew 18:20
-        -else
+        -if flash.any?
           .container
             -if flash[:alert]
               .alert.alert-error

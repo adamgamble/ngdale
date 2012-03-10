@@ -7,5 +7,55 @@
 */
 
 body {
-  padding-top: 60px;
+  padding-top: 85px;
+}
+
+.navbar-inner {
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-top: 14px;
+  height:50px;
+  background-color: #F0F0F0;
+  background-image: none;
+}
+
+.navbar .brand {
+  color: black;
+  font-weight: bold;
+}
+
+.nav li {
+  padding-left: 10px;
+  text-shadow: none;
+}
+
+.navbar .nav li a {
+  color: #555;
+}
+
+.navbar .nav a.btn {
+  margin-top: 4px;
+  padding-top: 5px;
+  padding-right: 14px;
+  padding-bottom: 6px;
+}
+
+.navbar .nav a.btn:hover {
+  color: black;
+  background-color: #E6E6E6;
+}
+
+.row .call_out {
+  text-align: center;
+  font-size: 40px;
+  height: 40px;
+  width: 100%;
+}
+
+.row .call_out.verse {
+  font-size: 25px;
+}
+
+.carousel img {
+  width: 570px;
+  height: 330px;
 }
