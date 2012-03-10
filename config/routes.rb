@@ -1,9 +1,11 @@
 Ngdale::Application.routes.draw do
-  devise_for :members do
+  devise_for :members
+  devise_scope :members do
     root :to => "custom_pages#home"
   end
 
-  devise_for :admins do
+  devise_for :admins
+  devise_scope :admins  do
     root :to => "custom_pages#home"
   end
 

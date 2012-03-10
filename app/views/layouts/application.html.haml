@@ -3,6 +3,7 @@
   %head
     %title NgdaleReading
     = stylesheet_link_tag    "application"
+    = stylesheet_link_tag    "custom_pages"
     = javascript_include_tag "application"
     = csrf_meta_tags
     :plain
@@ -25,11 +26,22 @@
             =link_to "Resources", "#"
           %li
             =link_to "Contact Us", "#"
+    -flash.each do |v|
+      .container
+      .alert.alert-block
+        %a.close{"data-dismiss" => "alert"}x
+        =v[1]
     .container
       .main_header
         %h1.title_header The North Gardendale church of Christ
         %h3.verse_header "For where two or three are gathered together in my name, there am I in the midst of them." -- Matthew 18:20
       .content
+        -if flash[:notice] 
+          .alert-message.success
+            = flash[:notice]
+        -if flash[:error] 
+          .alert-message.error
+            = flash[:error]
         = yield
     = javascript_include_tag "application"
     = yield :javascripts

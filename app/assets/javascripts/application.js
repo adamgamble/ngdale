@@ -5,6 +5,6 @@
 // the compiled file.
 //
 //= require jquery.js
+//= require jquery_ujs
 //= require_self 
-//= require_tree .
 //= require twitter/bootstrap

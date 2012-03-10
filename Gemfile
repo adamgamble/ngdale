@@ -23,6 +23,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 group :development do

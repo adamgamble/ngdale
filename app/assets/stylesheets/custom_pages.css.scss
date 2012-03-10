@@ -13,6 +13,12 @@ body {
   height:800px;
 }
 
+.item img {
+  width: 620px;
+  height: 330px;
+  -webkit-border-radius: 4px;
+}
+
 #map_modal {
   display: none;
 }
