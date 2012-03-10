@@ -18,7 +18,7 @@
         %li
           %h3 Wednesday Evening
           7:00 PM Bible Study
-      %span.assembly_text Assembling regularly at 380 Hickory Road, Gardendale, AL (click here for map)
+        %a{:href => "javascript:void(0);", :class => "assembly_text", :onclick => "$('#map_modal').modal({show: true});"}Assembling regularly at 380 Hickory Road, Gardendale, AL (click here for map)
   .span8
     #carousel.carousel
       .carousel-inner
@@ -28,6 +28,12 @@
             .carousel-caption
               %h4=carousel_image.header
               %p=carousel_image.caption
+#map_modal.modal.fade
+  .modal_header
+    %a{:class => "close", "data-dismiss" => "modal"}x
+    %h3 North Gardendale church of Christ
+  .modal_body
+    =image_tag "http://maps.google.com/maps/api/staticmap?center=33.700981,-86.820861&zoom=13&markers=33.700981,-86.820861&size=500x300&sensor=true"
 -content_for :javascripts do
   :javascript
     $(document).ready(function() {
