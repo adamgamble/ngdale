@@ -15,10 +15,16 @@
               =link_to "Logout", destroy_member_session_path, :method => :delete
     .container
       .content
+        -if flash[:alert]
+          .alert.alert-error
+            %a.close{"data-dismiss" => "alert"}x
+            = flash[:alert]
         -if flash[:notice] 
-          .alert-message.success
+          .alert.alert-success
+            %a.close{"data-dismiss" => "alert"}x
             = flash[:notice]
         -if flash[:error] 
-          .alert-message.error
+          .alert.alert-error
+            %a.close{"data-dismiss" => "alert"}x
             = flash[:error]
         = yield

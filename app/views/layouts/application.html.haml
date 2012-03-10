@@ -26,22 +26,26 @@
             =link_to "Resources", "#"
           %li
             =link_to "Contact Us", "#"
-    -flash.each do |v|
-      .container
-      .alert.alert-block
-        %a.close{"data-dismiss" => "alert"}x
-        =v[1]
     .container
       .main_header
-        %h1.title_header The North Gardendale church of Christ
-        %h3.verse_header "For where two or three are gathered together in my name, there am I in the midst of them." -- Matthew 18:20
+        -unless flash.any?
+          %h1.title_header The North Gardendale church of Christ
+          %h3.verse_header "For where two or three are gathered together in my name, there am I in the midst of them." -- Matthew 18:20
+        -else
+          .container
+            -if flash[:alert]
+              .alert.alert-error
+                %a.close{"data-dismiss" => "alert"}x
+                = flash[:alert]
+            -if flash[:notice] 
+              .alert.alert-success
+                %a.close{"data-dismiss" => "alert"}x
+                = flash[:notice]
+            -if flash[:error] 
+              .alert.alert-error
+                %a.close{"data-dismiss" => "alert"}x
+                = flash[:error]
       .content
-        -if flash[:notice] 
-          .alert-message.success
-            = flash[:notice]
-        -if flash[:error] 
-          .alert-message.error
-            = flash[:error]
         = yield
     = javascript_include_tag "application"
     = yield :javascripts
