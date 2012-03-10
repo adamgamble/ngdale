@@ -29,10 +29,10 @@
               %h4=carousel_image.header
               %p=carousel_image.caption
 #map_modal.modal.fade
-  .modal_header
+  .modal-header
     %a{:class => "close", "data-dismiss" => "modal"}x
     %h3 North Gardendale church of Christ
-  .modal_body
+  .modal-body
     =image_tag "http://maps.google.com/maps/api/staticmap?center=33.700981,-86.820861&zoom=13&markers=33.700981,-86.820861&size=500x300&sensor=true"
 -content_for :javascripts do
   :javascript
