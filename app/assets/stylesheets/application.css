@@ -8,18 +8,19 @@
 
 body {
   padding-top: 85px;
+  background-color: #F0F0F0;
 }
 
 .navbar-inner {
   font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding-top: 14px;
   height:50px;
-  background-color: #F0F0F0;
+  background-color: #036;
   background-image: none;
 }
 
 .navbar .brand {
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -29,10 +30,13 @@ body {
 }
 
 .navbar .nav li a {
-  color: #555;
+  color: white;
+  text-shadow: none;
+  opacity: 1;
 }
 
 .navbar .nav a.btn {
+  color: black;
   margin-top: 4px;
   padding-top: 5px;
   padding-right: 14px;
@@ -51,11 +55,35 @@ body {
   width: 100%;
 }
 
-.row .call_out.verse {
+#footer_carousel .call_out {
+  margin-top: 20px;
+  vertical-align: center;
+  text-align: center;
+  font-size: 40px;
+  height: 40px;
+  width: 100%;
+  color: white;
+}
+
+#footer_carousel .call_out.verse {
   font-size: 25px;
 }
 
 .carousel img {
-  width: 570px;
-  height: 330px;
+  width: 650px;
+  height: 280px;
+}
+
+.meeting_times h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+footer {
+  width: 100%;
+  background-color: #036;
+  height: 75px;
+  position: absolute;
+  bottom: 0px;
 }

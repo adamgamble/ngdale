@@ -48,5 +48,22 @@
                 = flash[:error]
       .content
         = yield
+    %footer
+      .container
+        .row
+          .span12
+            #footer_carousel.carousel
+              .carousel-inner
+                .item.active
+                  %h2.call_out.verse For where two or three are gathered in my name, there am I among them - Matthew 18:20
+                .item
+                  %h2.call_out.verse Count it all joy, my brothers, when you meet trials of various kinds - James 1:2
     = javascript_include_tag "application"
     = yield :javascripts
+    :javascript
+      $(document).ready(function() {
+        $('#footer_carousel').carousel({
+          interval: 5000,
+          loop: true
+        })
+      })
